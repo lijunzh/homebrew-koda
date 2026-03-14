@@ -7,20 +7,20 @@ class Koda < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/lijunzh/koda/releases/download/v0.1.10/koda-aarch64-apple-darwin.tar.gz"
-      sha256 "f6de5e580ee715665cb0a231688bf8f8ebde60c52268f3ee8dcfd1cf54fd7af7"
+      sha256 "5dfa90e5746d9e8ee0139c6529329109b4033d299070370194628b841e030239"
     else
       url "https://github.com/lijunzh/koda/releases/download/v0.1.10/koda-x86_64-apple-darwin.tar.gz"
-      sha256 "869c113383ed8ca8f592fc501ad40f8fe12aec745701ad1ff1bb8fdc184dfbbb"
+      sha256 "c7bf392aae82aa84ba4fb47e65cc67f26b5c0ecabb970e4b9cea25e2261091b8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/lijunzh/koda/releases/download/v0.1.10/koda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "70a99d6205108b24b758d162e0360699995ab50ca65ecfdc9e294343b14447bc"
+      sha256 "e3dbe9988d5d297124ba936a616cca70593e4ef80ea968325d818ba518968480"
     else
       url "https://github.com/lijunzh/koda/releases/download/v0.1.10/koda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "20b816bcfe1a44ef8abf23faa95bea5b865d2dde4ec0019e49d788ee9f8901e4"
+      sha256 "111840b19d13ba2a4900b58bc48f81de57fb19731953390eaed483230b7ab6f3"
     end
   end
 
