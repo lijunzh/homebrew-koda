@@ -1,26 +1,26 @@
 class Koda < Formula
   desc "High-performance AI coding agent built in Rust"
   homepage "https://github.com/lijunzh/koda"
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lijunzh/koda/releases/download/v0.1.14/koda-aarch64-apple-darwin.tar.gz"
-      sha256 "bd65c929d118dbc44590a451cd79788ee8c90e39f400bce5eedf111cf60fbed4"
+      url "https://github.com/lijunzh/koda/releases/download/v0.1.15/koda-aarch64-apple-darwin.tar.gz"
+      sha256 "bfdbd2ed26f106ada1e8fb9ad193fceef5e5dcd67f10826db7cd636e923d050b"
     else
-      url "https://github.com/lijunzh/koda/releases/download/v0.1.14/koda-x86_64-apple-darwin.tar.gz"
-      sha256 "aee7c22256cb8fd0090755df2a3da931011f91155a7dc6218a47a35cf9eef582"
+      url "https://github.com/lijunzh/koda/releases/download/v0.1.15/koda-x86_64-apple-darwin.tar.gz"
+      sha256 "16ce39d11afc329dbc5019b276fb892fa833e4126504c6db9fc591cd0b69d99e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/lijunzh/koda/releases/download/v0.1.14/koda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "4dca35d324ed3a320d34af4cf0738dd1e6bda14d8e284d6be9bcefd80b5df528"
+      url "https://github.com/lijunzh/koda/releases/download/v0.1.15/koda-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "01e7869712775ace5f11380ebd375a6bb95c688e44577d2ec9192beea2f5e224"
     else
-      url "https://github.com/lijunzh/koda/releases/download/v0.1.14/koda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b065a9d028968eb58f886f6bdd2b4251090c88e0b7c933ceae4858889060b722"
+      url "https://github.com/lijunzh/koda/releases/download/v0.1.15/koda-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c70c46c91e0c918124cccdc3db1fbb77555944abe3b15e8c99c741541216a1d0"
     end
   end
 
