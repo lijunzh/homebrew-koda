@@ -1,26 +1,24 @@
 class Koda < Formula
   desc "High-performance AI coding agent built in Rust"
   homepage "https://github.com/lijunzh/koda"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
 
+  # Apple Silicon only since 0.7.1: on an Intel Mac, Homebrew says
+  # the formula needs ARM64; `cargo install koda-cli --locked` works.
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lijunzh/koda/releases/download/v0.7.0/koda-aarch64-apple-darwin.tar.gz"
-      sha256 "939b0b7a1c60a092e43eba6d5af1e6c9f048ef9b3ad2e93b28feea90b2a67ba8"
-    else
-      url "https://github.com/lijunzh/koda/releases/download/v0.7.0/koda-x86_64-apple-darwin.tar.gz"
-      sha256 "9696ad8a8032d14721c1e26af76823520914ef8f7931a376787f7a43069ca847"
-    end
+    depends_on arch: :arm64
+    url "https://github.com/lijunzh/koda/releases/download/v0.7.1/koda-aarch64-apple-darwin.tar.gz"
+    sha256 "6ef6c6f403eb5911f9a081d7899c03b2feecd525012b3cff419051cea32b29f9"
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/lijunzh/koda/releases/download/v0.7.0/koda-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b24f155f5eaca385a0ced8e48cbf953081f36ad5a31c4577c3ea56854b798cd2"
+      url "https://github.com/lijunzh/koda/releases/download/v0.7.1/koda-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "832e59ff97b357fdb94e05a1d15a37a9973d14522587e4e93911c133b3f2a539"
     else
-      url "https://github.com/lijunzh/koda/releases/download/v0.7.0/koda-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bdcf15740ed6599dde605660f6abf8b6d42079cf8e628f5b0a1e6e624c8015e9"
+      url "https://github.com/lijunzh/koda/releases/download/v0.7.1/koda-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "35153ba0c3e60d331446d6954060ab8530643af904158716958e051d0c6132ad"
     end
   end
 
